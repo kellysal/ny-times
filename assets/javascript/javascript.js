@@ -2,7 +2,12 @@
 var APIKey = "A4bWaOPZD5ImgJGdWP0fiFgR4UMV4YUO";
 
 // URL we need to query the database
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json" + APIKey;
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?&api-key=" + APIKey;
+
+var searchTerm = "";
+var numRecords = 2;
+var startYear = 2003;
+var endYear = 4;
 
 // Create an AJAX call
 $.ajax({
@@ -12,4 +17,8 @@ $.ajax({
 
     // Log the queryURL
     console.log(queryURL);
+    console.log(response);
+    console.log(numRecords);
+
+
 });
